@@ -8,6 +8,7 @@ import numpy as np
 
 st.set_page_config(
     page_title="SPK Performa Karyawan (AHP–TOPSIS)",
+    st.subheader("By Andreas Masdiyanto"),
     page_icon="SPK_Karyawan.png",
     layout="wide"
 )
@@ -270,4 +271,5 @@ if st.session_state.step == 8:
 
     st.subheader("Top 10 Karyawan Terbaik")
     top10 = result.head(10)
+
     st.bar_chart(top10.set_index("Nama_Karyawan"))
